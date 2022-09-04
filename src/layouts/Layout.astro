@@ -18,6 +18,7 @@ const { title } = Astro.props
   <body>
     <div class="square">
       <h1 class="square__text">A</h1>
+      <input type="checkbox" name="checkbox" />
     </div>
     <slot />
     <style>
@@ -27,8 +28,18 @@ const { title } = Astro.props
         --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
 
         --color-text: hsl(12, 5%, 4%);
-        --color-bg: hsl(10, 21%, 95%);
         --color-border: hsl(17, 24%, 90%);
+
+        /* Dark light */
+        --color-fg: hsl(10, 21%, 95%);
+        --color-bg: hsl(12, 5%, 4%);
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --color-bg: hsl(10, 21%, 95%);
+          --color-fg: hsl(12, 5%, 4%);
+        }
       }
 
       html {
@@ -62,17 +73,28 @@ const { title } = Astro.props
         align-content: center;
         justify-content: center;
         margin-inline: auto;
-        background-color: #4f39fa;
+        background-color: var(--color-bg);
         width: clamp(1rem, 5vw + 2rem, 8rem);
         height: 100px;
       }
 
       .square__text {
-        color: var(--highlight-color);
+        color: var(--color-fg);
       }
     </style>
 
     <script>
+      const colorSchemeToggle = document.querySelector("input[name=checkbox]")
+
+      colorSchemeToggle.addEventListener("change", function () {
+        if (this.checked) {
+          addCss(":root {--color-bg: #000}")
+          addCss(":root {--color-fg: #fff}")
+        } else {
+          addCss(":root {--color-bg: #fff}")
+          addCss(":root {--color-fg: #000}")
+        }
+      })
       // Add styles
       const addCss = (css: string) => {
         const element = document.createElement("style")
