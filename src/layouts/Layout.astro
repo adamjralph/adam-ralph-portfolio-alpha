@@ -1,4 +1,6 @@
 ---
+import("../styles/global.scss")
+
 export interface Props {
   title: string
 }
@@ -12,15 +14,18 @@ const { title } = Astro.props
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,100&display=swap"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
-    <div class="square">
-      <h1 class="square__text">A</h1>
-      <input type="checkbox" name="checkbox" />
-    </div>
     <slot />
+
     <style>
       :root {
         --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
@@ -31,19 +36,25 @@ const { title } = Astro.props
         --color-border: hsl(17, 24%, 90%);
 
         /* Dark light */
-        --color-fg: hsl(10, 21%, 95%);
-        --color-bg: hsl(12, 5%, 4%);
+        --color-fg: hsl(0 0% 100%);
+        --color-bg: rgb(27, 27, 27);
+
+        /* Social colors */
+        --color-twitter: #1d9bf0;
+        --color-youtube: #ff0000;
+        --color-github: #727272;
       }
 
       @media (prefers-color-scheme: light) {
         :root {
-          --color-bg: hsl(10, 21%, 95%);
-          --color-fg: hsl(12, 5%, 4%);
+          --color-bg: hsl(0 0% 100%);
+          --color-fg: rgb(27, 27, 27);
         }
       }
 
       html {
-        font-family: system-ui, sans-serif;
+        /* font-family: system-ui, sans-serif; */
+        font-family: "Barlow", sans-serif;
         font-size: var(--font-size-base);
         color: var(--color-text);
         background-color: var(--color-bg);
@@ -82,29 +93,5 @@ const { title } = Astro.props
         color: var(--color-fg);
       }
     </style>
-
-    <script>
-      const colorSchemeToggle = document.querySelector("input[name=checkbox]")
-
-      colorSchemeToggle.addEventListener("change", function () {
-        if (this.checked) {
-          addCss(":root {--color-bg: #000}")
-          addCss(":root {--color-fg: #fff}")
-        } else {
-          addCss(":root {--color-bg: #fff}")
-          addCss(":root {--color-fg: #000}")
-        }
-      })
-      // Add styles
-      const addCss = (css: string) => {
-        const element = document.createElement("style")
-        element.innerText = css
-        const newStyle = document.body.appendChild(element)
-        return newStyle
-      }
-
-      // addCss(".square__text { color: white}")
-      addCss(":root {--highlight-color: magenta}")
-    </script>
   </body>
 </html>
