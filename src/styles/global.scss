@@ -78,6 +78,10 @@ h6 {
 a {
   text-decoration: none;
 }
+
+a:visited {
+  color: var(--color-fg);
+}
 // // Breakpoints
 // $mobile: 400px;
 // $tablet: 640px;
@@ -118,3 +122,24 @@ a {
 //     --fs-400: 1.125rem;
 //   }
 // }
+
+.text-gradient {
+  font-weight: 900;
+  background-image: var(--theme-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100% 200%;
+  background-position-y: 100%;
+  border-radius: 0.4rem;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    background-position-y: 0%;
+  }
+  50% {
+    background-position-y: 80%;
+  }
+}

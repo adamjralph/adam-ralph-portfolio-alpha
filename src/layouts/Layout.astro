@@ -20,6 +20,10 @@ const { title } = Astro.props
       href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,100&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/6543bd4db3.js"
+      crossorigin="anonymous"
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -32,6 +36,10 @@ const { title } = Astro.props
         --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
         --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
 
+        /* Theme colors */
+        --color-highlight: #1b4bf7;
+        --color-highlight-light: #0fbffc;
+        --color-highlight-deep: #5b0ffc;
         --color-text: hsl(12, 5%, 4%);
         --color-border: hsl(17, 24%, 90%);
 
