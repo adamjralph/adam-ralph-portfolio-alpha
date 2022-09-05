@@ -175,7 +175,7 @@
     background-color: var(--color-fg);
     border: 2px solid var(--color-fg);
     color: var(--color-bg);
-    filter: drop-shadow(0 0 0.5rem var(--color-fg));
+    filter: drop-shadow(0 0 0.3rem var(--color-fg));
   }
 
   // @include media.for-tablet(width.$tablet) {
