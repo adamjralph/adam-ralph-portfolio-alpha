@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+---
+
+<Layout title="About">
+  <Header />
+  <section class="the-office">
+    <div class="background">
+      <div class="background-container">
+        <div class="background-artwork"></div>
+      </div>
+      <div class="content">
+        <h3>Watch all 9 seasons of <em>The Office</em> four times through.</h3>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="overlay">
+      <div></div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .overlay {
+    --body-bg: #0f6a80;
+    --bg-position: calc(50% - 30vh);
+    --overlay-w: 35vw;
+    --overlay-h: 60vh;
+    width: 50%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    z-index: 1;
+    background-image: linear-gradient(
+        to bottom,
+        var(--body-bg) var(--bg-position),
+        transparent var(--bg-position)
+      ),
+      linear-gradient(
+        to top,
+        var(--body-bg) var(--bg-position),
+        transparent var(--bg-position)
+      );
+  }
+  .overlay div {
+    width: var(--overlay-w);
+    height: var(--overlay-h);
+    border-radius: 1em;
+    box-shadow: 0 0 0 0.5em var(--body-bg);
+  }
+</style>

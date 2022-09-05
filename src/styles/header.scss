@@ -105,8 +105,8 @@
   top: 0;
   position: absolute;
   transform: translateX(400px);
-  transition: all 0.5s ease;
-  display: none;
+  transition: transform 0.5s ease;
+  // display: none;
   // @include media.for-tablet(width.$tablet) {
   //   visibility: visible;
   //   height: auto;
@@ -122,22 +122,24 @@
     display: block;
     left: 0;
     width: 100%;
-    min-height: 340px;
-    margin-block-start: 5.5rem;
-    padding-block: 3rem;
+    min-height: 355px;
+
+    margin-block-start: 6rem;
+    // padding-block: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: var(--color-bg);
     transform: translateX(0);
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
   }
 }
 
 .nav-transition {
   padding-block-start: 2rem;
   padding-inline: 3rem;
+  margin-block-end: 3rem;
   transition: padding 0.5s ease;
 }
 
@@ -148,7 +150,7 @@
   letter-spacing: 1px;
   &:hover,
   &:focus {
-    color: var(--cl-primary-blue);
+    color: cornflowerblue;
   }
 
   transition: color 0.3s ease-in-out;
@@ -173,6 +175,7 @@
     background-color: var(--color-fg);
     border: 2px solid var(--color-fg);
     color: var(--color-bg);
+    filter: drop-shadow(0 0 0.5rem var(--color-fg));
   }
 
   // @include media.for-tablet(width.$tablet) {
