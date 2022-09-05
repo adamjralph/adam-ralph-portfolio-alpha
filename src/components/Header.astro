@@ -4,6 +4,11 @@ import("../styles/header.scss")
 
 <div class="container">
   <header id="header" class="header">
+    <!-- Dark/Light mode toggle-->
+    <div class="dark-light">
+      <i class="dark-light__icon fa-solid fa-circle-half-stroke"></i>
+      <input class="dark-light__switch" type="checkbox" name="checkbox" />
+    </div>
     <!-- Navigation mobile -->
     <div class="hamburger-logo">
       <button class="nav-toggle" aria-label="open navigation">
@@ -17,11 +22,6 @@ import("../styles/header.scss")
           ><button class="btn nav__btn nav__link">Lets Talk</button>
         </a>
       </nav>
-      <!-- Dark/Light mode toggle-->
-      <div class="dark-light">
-        <i class="dark-light__icon fa-solid fa-circle-half-stroke"></i>
-        <input class="dark-light__switch" type="checkbox" name="checkbox" />
-      </div>
       <!-- Logo -->
       <div class="logo-mobile">
         <h1 class="text-gradient logo-mobile__heading">adam</h1>

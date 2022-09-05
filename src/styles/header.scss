@@ -1,29 +1,23 @@
-* {
-  // outline: 1px red solid;
-}
+// * {
+//   outline: 1px red solid;
+// }
+
 .header {
   display: flex;
   flex-direction: column;
-  align-items: space-between;
-  // justify-content: space-between;
+  // align-items: space-between;
+  // justify-content: center;
   // margin-inline: auto;
-}
-
-.logo-desktop {
-  display: none;
-}
-
-.logo-mobile {
-  // color: var(--theme-gradient);
-  display: block;
-  margin-inline-end: 1rem;
-  margin-block-start: 1rem;
 }
 
 // Dark/light mode
 .dark-light {
-  margin-block-start: 2.5rem;
-  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  margin-block-start: 0.5rem;
+  margin-inline-end: 2rem;
 }
 
 .dark-light__switch {
@@ -47,8 +41,21 @@
 // Hamburger / logo container
 .hamburger-logo {
   display: flex;
-  padding-inline: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  height: 1rem;
   transition: all 0.3s ease;
+}
+
+.logo-desktop {
+  display: none;
+}
+
+.logo-mobile {
+  display: block;
+  margin-inline-end: 1rem;
+  margin-block-start: 1rem;
 }
 
 // Nav toggle
@@ -93,7 +100,8 @@
 
 .nav {
   visibility: hidden;
-  height: 0;
+  // height: 0;
+  top: 0;
   position: absolute;
   transform: translateX(400px);
   transition: transform 0.5s ease;
@@ -112,7 +120,7 @@
     left: 0;
     width: 100%;
     min-height: 340px;
-    margin-block-start: 5rem;
+    margin-block-start: 10rem;
     padding-block: 3rem;
     display: flex;
     flex-direction: column;
@@ -184,9 +192,10 @@
   align-items: space-between;
   justify-content: space-between;
   margin-inline: auto;
+  margin-block-start: 1rem;
   // @include media.for-tablet(width.$tablet) {
-  margin-inline-start: var(--mg-800);
-  margin-block-start: 0.9rem;
+  // margin-inline-start: var(--mg-800);
+  // margin-block-start: 0.9rem;
   // }
 }
 
