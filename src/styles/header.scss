@@ -126,7 +126,7 @@
 
 .nav-transition {
   padding-block-start: 2rem;
-  padding-inline: 1rem;
+  padding-inline: 3rem;
   transition: padding 0.5s ease;
 }
 
@@ -181,12 +181,12 @@
 // Social icons
 .header-social {
   // display: none;
-  // align-items: space-between;
-  // justify-content: space-between;
+  align-items: space-between;
+  justify-content: space-between;
   margin-inline: auto;
   // @include media.for-tablet(width.$tablet) {
-  //   margin-inline-start: var(--mg-800);
-  //   margin-block-start: 0.9rem;
+  margin-inline-start: var(--mg-800);
+  margin-block-start: 0.9rem;
   // }
 }
 

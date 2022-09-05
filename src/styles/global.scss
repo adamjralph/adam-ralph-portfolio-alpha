@@ -107,6 +107,8 @@ a:visited {
 // Page container
 .container {
   width: 100%;
+  max-width: 1220px;
+  margin: auto;
   //   @include media.for-tablet($tablet) {
   //     position: relative;
   //     width: 80%;
