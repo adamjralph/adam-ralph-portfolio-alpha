@@ -120,7 +120,7 @@
     left: 0;
     width: 100%;
     min-height: 340px;
-    margin-block-start: 10rem;
+    margin-block-start: 5.5rem;
     padding-block: 3rem;
     display: flex;
     flex-direction: column;
@@ -186,13 +186,25 @@
   transition: background-color, border, color, background-color 0.5s ease-in-out;
 }
 
+// Hero image
+.hero-image {
+  background-image: url("../images/driftwood.jpeg");
+  background-size: 100%;
+  // background-size: cover/cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  margin-inline: auto;
+  margin-block-start: 2.5rem;
+}
+
 // Social icons
 .header-social {
-  // display: none;
-  align-items: space-between;
-  justify-content: space-between;
+  // display: flex;
+  // align-items: space-between;
+  // justify-content: space-between;
   margin-inline: auto;
-  margin-block-start: 1rem;
+  margin-block-start: 2rem;
   // @include media.for-tablet(width.$tablet) {
   // margin-inline-start: var(--mg-800);
   // margin-block-start: 0.9rem;
