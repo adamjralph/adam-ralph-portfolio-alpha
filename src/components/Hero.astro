@@ -29,7 +29,7 @@ import("../styles/header.scss")
             href="http://twitter.com/adamjralph"
             class="social__link social__link--twitter"
           >
-            <i class="fa-brands fa-twitter fa-xl hero__social__icon--twitter"
+            <i class="fa-brands fa-twitter fa-xl header__social__icon--twitter"
             ></i>
           </a>
           <!-- Youtube-->
@@ -37,7 +37,7 @@ import("../styles/header.scss")
             href="https://www.youtube.com/channel/UCRMH3kvPD8o1Khssr4A8EWg"
             class="social__link social__link--youtube"
           >
-            <i class="fa-brands fa-youtube fa-xl hero__social__icon--youtube"
+            <i class="fa-brands fa-youtube fa-xl header__social__icon--youtube"
             ></i>
           </a>
           <!-- Github -->
@@ -45,7 +45,8 @@ import("../styles/header.scss")
             href="https://github.com/adamjralph"
             class="social__link social__link--github"
           >
-            <i class="fa-brands fa-github fa-xl hero__social__icon--github"></i>
+            <i class="fa-brands fa-github fa-xl header__social__icon--github"
+            ></i>
           </a>
         </div>
       </div>
@@ -88,7 +89,7 @@ import("../styles/header.scss")
 
   .hero__action {
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
     justify-content: space-between;
     flex-direction: row-reverse;
     padding-inline: 1rem;
@@ -107,35 +108,11 @@ import("../styles/header.scss")
 
   .hero__contact {
     width: 100%;
-    max-width: 40%;
+    max-width: 32%;
     margin-inline-end: 1rem;
   }
-  .header__social__icon {
-    color: var(--color-bg);
-  }
-  .header__social--twitter,
-  .header__social--youtube,
-  .header__social--github {
-    transition: color 0.3s ease-in-out;
-    margin-inline: 0;
-    padding-inline: 0;
-  }
 
-  .hero__social__icon--twitter:hover,
-  .hero__social__icon--twitter:focus {
-    color: var(--color-twitter);
-  }
-  .hero__social__icon--youtube:hover,
-  .hero__social__icon--youtube:focus {
-    color: var(--color-youtube);
-  }
-
-  .hero__social__icon--github {
-    border-radius: 50%;
-  }
-  .hero__social__icon--github:hover,
-  .hero__social__icon--github:hover {
-    color: var(--color-highlight-deep);
-    /* background-color: var(--color-fg); */
+  .hero__btn {
+    padding: 0.2rem;
   }
 </style>

@@ -143,8 +143,8 @@
 }
 
 .nav-transition {
-  padding-block-start: 1.5rem;
-  padding-inline: 2rem;
+  padding-block-start: 1rem;
+  padding-inline: 1rem;
   // margin-block-end: 3rem;
   transition: padding 0.3s ease;
 }
@@ -177,14 +177,14 @@
   width: 100%;
   background-color: var(--color-bg);
   color: var(--color-fg);
-  border: 2px solid var(--color-fg);
+  border: 2px inset var(--color-fg);
   border-radius: 4px;
   font-size: var(--font-size-link-mobile);
 
   &:hover,
   &:focus {
     background-color: var(--color-fg);
-    border: 2px solid var(--color-fg);
+    border: 2px inset var(--color-fg);
     color: var(--color-bg);
     filter: drop-shadow(0 0 0.3rem var(--color-fg));
   }
@@ -218,8 +218,6 @@
 
 .social__link {
   padding-inline: 1rem;
-  width: 3rem;
-  height: 3rem;
 }
 
 // Social icons hover/focus state
