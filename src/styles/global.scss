@@ -113,13 +113,16 @@ a:visited {
   width: 100%;
   max-width: 1220px;
   margin: auto;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
   //   @include media.for-tablet($tablet) {
   //     position: relative;
   //     width: 80%;
   //     max-width: 1220px;
   //     margin: auto;
   //   }
+  &--mobile {
+    width: 100%;
+  }
 }
 // @media (min-width: 40rem) {
 //   :root {

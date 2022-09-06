@@ -63,9 +63,6 @@ import("../styles/header.scss")
       <h1 class="logo-desktop__heading">adam</h1>
     </div>
 
-    <!-- Header image -->
-    <div class="hero-image"></div>
-
     <!-- Social links -->
 
     <!-- Navigation -->
@@ -78,10 +75,6 @@ import("../styles/header.scss")
       </a>
     </nav>
   </header>
-
-  <style>
-
-  </style>
 
   <script>
     // Dark/Light mode
@@ -108,11 +101,11 @@ import("../styles/header.scss")
     function checkTheme() {
       let themeToggle = localStorage.getItem("themeChange-8d23k88")
       if (themeToggle) {
-        addCss(":root {--color-bg: #000}")
-        addCss(":root {--color-fg: #fff}")
+        addCss(":root {--color-bg: #ffffff}")
+        addCss(":root {--color-fg: #1b1b1b}")
       } else {
-        addCss(":root {--color-bg: #fff}")
-        addCss(":root {--color-fg: #000}")
+        addCss(":root {--color-bg: #1b1b1b}")
+        addCss(":root {--color-fg: #ffffff}")
       }
     }
     checkTheme()
@@ -120,14 +113,14 @@ import("../styles/header.scss")
     // Toggle menu
     const navToggle = document.querySelector(".nav-toggle")
     const nav = document.querySelector(".nav")
-    const image = document.querySelector(".hero-image")
+    const hero = document.querySelector(".hero")
 
     const navContainer = document.querySelector(".hamburger-logo")
 
     navToggle.addEventListener("click", () => {
       nav.classList.toggle("nav--visible")
       navContainer.classList.toggle("nav-transition")
-      image.classList.toggle(".image-opacity")
+      hero.classList.toggle(".hero-opacity")
     })
   </script>
 </div>

@@ -128,7 +128,7 @@
     opacity: 1;
     left: 0;
     width: 100%;
-    min-height: 320px;
+    min-height: 350px;
 
     margin-block-start: 5rem;
     // padding-block: 3rem;
@@ -201,25 +201,6 @@
   // }
 
   transition: background-color, border, color, 0.5s ease-in-out;
-}
-
-// Hero image
-.hero-image {
-  opacity: 1;
-  background-image: url("../images/driftwood.jpeg");
-  background-size: 100%;
-  // background-size: cover/cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 300px;
-  margin-inline: auto;
-  margin-block-start: 2.5rem;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.image-opacity {
-  opacity: 0;
-  // transition: opacity 0.1s ease-in-out;
 }
 
 // Social icons
