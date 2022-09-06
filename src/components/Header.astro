@@ -113,10 +113,10 @@ import("../styles/header.scss")
     let hero = document.getElementById("hero")
 
     function hideHero() {
-      if (hero.style.display === "none") {
-        hero.style.display = "block"
+      if (hero.style.opacity === "0") {
+        hero.style.display = "1"
       } else {
-        hero.style.display = "none"
+        hero.style.display = "0"
       }
     }
     // Toggle menu
