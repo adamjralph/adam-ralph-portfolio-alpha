@@ -24,34 +24,31 @@ import("../styles/header.scss")
         </a>
       </div>
       <div class="horizontal-line"></div>
-      <div class="hero__action">
-        <!-- Social links -->
-        <div class="hero__social header__social">
-          <!-- Twitter -->
-          <a
-            href="http://twitter.com/adamjralph"
-            class="social__link social__link--twitter"
-          >
-            <i class="fa-brands fa-twitter fa-xl header__social__icon--twitter"
-            ></i>
-          </a>
-          <!-- Youtube-->
-          <a
-            href="https://www.youtube.com/channel/UCRMH3kvPD8o1Khssr4A8EWg"
-            class="social__link social__link--youtube"
-          >
-            <i class="fa-brands fa-youtube fa-xl header__social__icon--youtube"
-            ></i>
-          </a>
-          <!-- Github -->
-          <a
-            href="https://github.com/adamjralph"
-            class="social__link social__link--github"
-          >
-            <i class="fa-brands fa-github fa-xl header__social__icon--github"
-            ></i>
-          </a>
-        </div>
+      <!-- Social links -->
+      <div class="hero__social header__social">
+        <!-- Twitter -->
+        <a
+          href="http://twitter.com/adamjralph"
+          class="social__link social__link--twitter"
+        >
+          <i class="fa-brands fa-twitter fa-xl header__social__icon--twitter"
+          ></i>
+        </a>
+        <!-- Youtube-->
+        <a
+          href="https://www.youtube.com/channel/UCRMH3kvPD8o1Khssr4A8EWg"
+          class="social__link social__link--youtube"
+        >
+          <i class="fa-brands fa-youtube fa-xl header__social__icon--youtube"
+          ></i>
+        </a>
+        <!-- Github -->
+        <a
+          href="https://github.com/adamjralph"
+          class="social__link social__link--github"
+        >
+          <i class="fa-brands fa-github fa-xl header__social__icon--github"></i>
+        </a>
       </div>
       <div class="horizontal-line"></div>
     </section>
@@ -76,7 +73,7 @@ import("../styles/header.scss")
     margin-block-start: 2rem;
     margin-inline-start: 2rem;
     text-align: left;
-    max-width: 60%;
+    max-width: 70%;
     color: var(--color-bg);
     font-size: var(--font-size-lg);
   }
@@ -115,14 +112,17 @@ import("../styles/header.scss")
   }
 
   .hero__social {
-    margin-inline: auto;
-    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    /* margin-inline: auto; */
+    /* max-width: 100%; */
     /* margin-inline-start: 0; */
   }
 
   .social__link {
     /* padding-block-start: 2rem; */
-    padding-inline-end: 0.3rem;
+    /* padding-inline-end: 0.3rem; */
   }
 
   .hero__btn {
