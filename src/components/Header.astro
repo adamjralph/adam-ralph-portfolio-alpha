@@ -52,7 +52,9 @@ import("../styles/header.scss")
       </nav>
       <!-- Logo -->
       <div class="logo-mobile">
-        <h1 class="text-gradient logo-mobile__heading">adam</h1>
+        <a href="/">
+          <h1 class="text-gradient logo-mobile__heading">adam</h1>
+        </a>
       </div>
     </div>
 
@@ -119,12 +121,14 @@ import("../styles/header.scss")
     // Toggle menu
     const navToggle = document.querySelector(".nav-toggle")
     const nav = document.querySelector(".nav")
+    const image = document.querySelector(".hero-image")
 
     const navContainer = document.querySelector(".hamburger-logo")
 
     navToggle.addEventListener("click", () => {
       nav.classList.toggle("nav--visible")
       navContainer.classList.toggle("nav-transition")
+      image.classList.toggle(".image-opacity")
     })
   </script>
 </div>

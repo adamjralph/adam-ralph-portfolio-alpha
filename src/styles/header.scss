@@ -14,11 +14,12 @@
 
 // Dark/light mode
 .dark-light {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-  margin-block-start: 0.5rem;
+  margin-block-start: 1rem;
   // padding-inline-start: 1rem;
   // margin-inline-end: 2rem;
 }
@@ -48,6 +49,7 @@
   align-items: center;
   justify-content: space-between;
   // padding-inline: 1rem;
+  margin-block-start: 2rem;
   height: 1rem;
   transition: all 0.3s ease;
 }
@@ -126,9 +128,9 @@
     opacity: 1;
     left: 0;
     width: 100%;
-    min-height: 360px;
+    min-height: 320px;
 
-    margin-block-start: 7rem;
+    margin-block-start: 5rem;
     // padding-block: 3rem;
     display: flex;
     flex-direction: column;
@@ -143,8 +145,8 @@
 .nav-transition {
   padding-block-start: 1.5rem;
   padding-inline: 2rem;
-  margin-block-end: 3rem;
-  transition: padding 0.5s ease;
+  // margin-block-end: 3rem;
+  transition: padding 0.3s ease;
 }
 
 .nav__link {
@@ -203,6 +205,7 @@
 
 // Hero image
 .hero-image {
+  opacity: 1;
   background-image: url("../images/driftwood.jpeg");
   background-size: 100%;
   // background-size: cover/cover;
@@ -211,6 +214,12 @@
   min-height: 300px;
   margin-inline: auto;
   margin-block-start: 2.5rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-opacity {
+  opacity: 0;
+  // transition: opacity 0.1s ease-in-out;
 }
 
 // Social icons
