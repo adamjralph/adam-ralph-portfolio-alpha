@@ -16,7 +16,7 @@
 .dark-light {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 
   margin-block-start: 0.5rem;
   margin-inline-end: 2rem;
@@ -45,7 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 1rem;
+  // padding-inline: 1rem;
   height: 1rem;
   transition: all 0.3s ease;
 }
@@ -56,7 +56,6 @@
 
 .logo-mobile {
   display: block;
-  margin-inline-end: 1rem;
   margin-block-start: 1rem;
 }
 
@@ -68,7 +67,6 @@
   height: 2.5rem;
   padding: 0em;
   margin-block-start: 2rem;
-  margin-inline-start: 1rem;
 
   border-radius: 50%;
   background: var(--color-bg);
@@ -123,7 +121,7 @@
     display: block;
     left: 0;
     width: 100%;
-    min-height: 355px;
+    min-height: 360px;
 
     margin-block-start: 7rem;
     // padding-block: 3rem;
@@ -138,8 +136,8 @@
 }
 
 .nav-transition {
-  padding-block-start: 2rem;
-  padding-inline: 3rem;
+  padding-block-start: 1rem;
+  padding-inline: 2rem;
   margin-block-end: 3rem;
   transition: padding 0.5s ease;
 }
