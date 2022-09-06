@@ -56,6 +56,7 @@ import("../styles/header.scss")
 
 <style>
   .hero {
+    display: block;
     margin-block-start: 3rem;
     background-color: var(--color-bg);
   }
@@ -70,8 +71,8 @@ import("../styles/header.scss")
     font-size: var(--font-size-lg);
   }
 
-  .hero__opacity {
-    opacity: 0;
+  #hero__opacity {
+    visibility: hidden;
   }
 
   .hero__heading--2 {

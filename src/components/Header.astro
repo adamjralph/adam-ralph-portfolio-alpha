@@ -110,17 +110,25 @@ import("../styles/header.scss")
     }
     checkTheme()
 
+    let hero = document.getElementById("hero")
+
+    function hideHero() {
+      if (hero.style.display === "none") {
+        hero.style.display = "block"
+      } else {
+        hero.style.display = "none"
+      }
+    }
     // Toggle menu
     const navToggle = document.querySelector(".nav-toggle")
     const nav = document.querySelector(".nav")
-    const hero = document.querySelector(".hero")
 
     const navContainer = document.querySelector(".hamburger-logo")
 
     navToggle.addEventListener("click", () => {
       nav.classList.toggle("nav--visible")
       navContainer.classList.toggle("nav-transition")
-      hero.classList.toggle(".hero__opacity")
+      hideHero()
     })
   </script>
 </div>
