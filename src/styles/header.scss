@@ -19,7 +19,7 @@
   align-items: flex-start;
 
   margin-block-start: 0.5rem;
-  padding-inline-start: 1rem;
+  // padding-inline-start: 1rem;
   // margin-inline-end: 2rem;
 }
 
@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 1rem;
+  // padding-inline: 1rem;
   height: 1rem;
   transition: all 0.3s ease;
 }
@@ -101,12 +101,14 @@
 }
 
 .nav {
-  // visibility: hidden;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  // display: none;
+
   top: 0;
   position: absolute;
-  transform: translateX(400px);
-  transition: transform 0.5s ease;
+  transform: translateY(-400px);
+  transition: transform 0.3s ease-in-out;
   // display: none;
   // @include media.for-tablet(width.$tablet) {
   //   visibility: visible;
@@ -119,8 +121,9 @@
   // }
 
   &--visible {
-    // visibility: visible;
-    display: block;
+    visibility: visible;
+    // display: flex;
+    opacity: 1;
     left: 0;
     width: 100%;
     min-height: 360px;
@@ -132,8 +135,8 @@
     align-items: center;
     justify-content: center;
     background: var(--color-bg);
-    transform: translateX(0);
-    transition: transform 0.5s ease;
+    transform: translateY(0);
+    transition: transform 0.3s, opacity 0.5s ease-in-out;
   }
 }
 
@@ -258,7 +261,7 @@
   }
   &--github:hover,
   &--github:focus {
-    color: var(--color-bg);
-    background-color: var(--color-fg);
+    color: var(--color-highlight-deep);
+    // background-color: var(--color-fg);
   }
 }
