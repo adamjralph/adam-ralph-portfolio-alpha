@@ -101,7 +101,8 @@
 }
 
 .nav {
-  visibility: hidden;
+  // visibility: hidden;
+  display: none;
   top: 0;
   position: absolute;
   transform: translateX(400px);
@@ -118,13 +119,13 @@
   // }
 
   &--visible {
-    visibility: visible;
+    // visibility: visible;
     display: block;
     left: 0;
     width: 100%;
     min-height: 355px;
 
-    margin-block-start: 6rem;
+    margin-block-start: 7rem;
     // padding-block: 3rem;
     display: flex;
     flex-direction: column;

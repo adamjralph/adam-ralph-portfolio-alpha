@@ -77,6 +77,7 @@ import("../styles/header.scss")
 
   <script>
     // Dark/Light mode
+
     // Add styles
     const addCss = (css: string) => {
       const element = document.createElement("style")
@@ -89,17 +90,15 @@ import("../styles/header.scss")
 
     colorSchemeToggle.addEventListener("change", function () {
       if (this.checked) {
-        localStorage.setItem("themeChange", "on")
-        // console.log(token)
+        localStorage.setItem("themeChange-8d23k88", "on")
       } else {
-        localStorage.removeItem("themeChange")
-        // console.log(token)
+        localStorage.removeItem("themeChange-8d23k88")
       }
       checkTheme()
     })
 
     function checkTheme() {
-      let themeToggle = localStorage.getItem("themeChange")
+      let themeToggle = localStorage.getItem("themeChange-8d23k88")
       if (themeToggle) {
         addCss(":root {--color-bg: #000}")
         addCss(":root {--color-fg: #fff}")
