@@ -77,18 +77,6 @@ import("../styles/header.scss")
 
   <script>
     // Dark/Light mode
-    const colorSchemeToggle = document.querySelector("input[name=checkbox]")
-
-    colorSchemeToggle.addEventListener("change", function () {
-      if (this.checked) {
-        addCss(":root {--color-bg: #000}")
-        addCss(":root {--color-fg: #fff}")
-        // addCss(".nav__btn:hover, .nav__btn:focus {filter: none};")
-      } else {
-        addCss(":root {--color-bg: #fff}")
-        addCss(":root {--color-fg: #000}")
-      }
-    })
     // Add styles
     const addCss = (css: string) => {
       const element = document.createElement("style")
@@ -96,6 +84,32 @@ import("../styles/header.scss")
       const newStyle = document.body.appendChild(element)
       return newStyle
     }
+
+    const colorSchemeToggle = document.querySelector("input[name=checkbox]")
+
+    colorSchemeToggle.addEventListener("change", function () {
+      if (this.checked) {
+        localStorage.setItem("themeChange", "on")
+        // console.log(token)
+      } else {
+        localStorage.removeItem("themeChange")
+        // console.log(token)
+      }
+      checkTheme()
+    })
+
+    function checkTheme() {
+      let themeToggle = localStorage.getItem("themeChange")
+      if (themeToggle) {
+        addCss(":root {--color-bg: #000}")
+        addCss(":root {--color-fg: #fff}")
+        // addCss(".nav__btn:hover, .nav__btn:focus {filter: none};")
+      } else {
+        addCss(":root {--color-bg: #fff}")
+        addCss(":root {--color-fg: #000}")
+      }
+    }
+    checkTheme()
 
     // Toggle menu
     const navToggle = document.querySelector(".nav-toggle")
