@@ -64,6 +64,8 @@ import("../styles/header.scss")
 
 <style>
   .hero {
+    display: flex;
+    flex-direction: column;
     position: relative;
     opacity: 1;
     margin-block-start: 3rem;
@@ -73,16 +75,15 @@ import("../styles/header.scss")
 
   .hero__image {
     position: absolute;
-    top: -4rem;
-    right: -5.5rem;
-    background-image: url("../images/adam-removebg-preview.png");
-
-    height: 340px;
-    width: 300px;
+    top: 0;
+    right: 0;
+    background-image: url("../images/adam-removebg-cropped.png");
+    /* margin-block-start: 3rem; */
+    height: 100%;
+    width: 50%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin-left: -50px;
     z-index: -1;
   }
 
@@ -102,7 +103,6 @@ import("../styles/header.scss")
     max-width: 70%;
     color: var(--color-bg);
     font-size: var(--font-size-lg);
-    margin-inline-end: -100px;
     z-index: 1;
   }
 
