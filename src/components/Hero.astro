@@ -75,23 +75,22 @@ import("../styles/header.scss")
 
   .hero__image {
     position: absolute;
-    overflow: hidden;
     top: 0;
     right: 0;
-    background-image: url("../images/adam-removebg-cropped.png");
-    /* margin-block-start: 3rem; */
-    height: 80%;
+    background-image: linear-gradient(transparent, var(--color-bg)),
+      url("../images/adam-removebg-cropped.png");
+    height: 100%;
+    max-height: 100%;
     width: 70%;
     margin-block-start: 2rem;
-    margin-inline-end: -4rem;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-position: 0 10%;
     background-size: cover;
+    background-clip: padding-box;
     z-index: -1;
-    animation: fadeInAnimation ease-in 2s;
+    animation: fadeInAnimation ease-in-out 1.75s;
     animation-iteration-count: 1;
     animation-fill-mode: backwards;
-    animation-delay: 1s;
+    animation-delay: 0.8s;
   }
 
   .hero__content {
@@ -167,9 +166,9 @@ import("../styles/header.scss")
 
   .hero__btn {
     padding: 0.2rem;
-    animation: fadeInAnimation ease-in-out 2s;
+    animation: fadeInAnimation ease-in-out 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: backwards;
-    animation-delay: 1.5s;
+    animation-delay: 1.6s;
   }
 </style>
