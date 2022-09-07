@@ -5,52 +5,81 @@ import Header from "../components/Header.astro"
 
 <Layout title="About">
   <Header />
-  <section class="the-office">
-    <div class="background">
-      <div class="background-container">
-        <div class="background-artwork"></div>
-      </div>
-      <div class="content">
-        <h3>Watch all 9 seasons of <em>The Office</em> four times through.</h3>
-      </div>
-    </div>
-  </section>
-  <div class="container">
-    <div class="overlay">
-      <div></div>
-    </div>
+  <div class="about-container">
+    <section class="heading">
+      <h1>Card with animated border</h1>
+    </section>
+    <section class="card">
+      <div class="color-layer"></div>
+      <div class="inner-layer"></div>
+      <h1 class="text-layer">Hello!</h1>
+    </section>
   </div>
 </Layout>
 
 <style>
-  .overlay {
-    --body-bg: #0f6a80;
-    --bg-position: calc(50% - 30vh);
-    --overlay-w: 35vw;
-    --overlay-h: 60vh;
-    width: 50%;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    left: 0;
-    display: grid;
-    place-content: center;
-    z-index: 1;
-    background-image: linear-gradient(
-        to bottom,
-        var(--body-bg) var(--bg-position),
-        transparent var(--bg-position)
-      ),
-      linear-gradient(
-        to top,
-        var(--body-bg) var(--bg-position),
-        transparent var(--bg-position)
-      );
+  .about-container {
+    width: 100%;
+    padding-inline: 2rem;
   }
-  .overlay div {
-    width: var(--overlay-w);
-    height: var(--overlay-h);
-    border-radius: 1em;
-    box-shadow: 0 0 0 0.5em var(--body-bg);
+  .heading {
+    margin-block: 2rem;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .card > * {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  .card {
+    display: grid;
+    position: relative;
+    /* place-items: center; */
+    overflow: hidden;
+    background-color: transparent;
+    height: 100px;
+    max-height: 200px;
+    max-width: 200px;
+    margin-inline: auto;
+    border: 1px solid var(--color-highlight);
+    border-radius: 5px;
+  }
+
+  .color-layer {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    background-color: var(--color-fg);
+    width: 15%;
+    height: 300%;
+    animation: borderRotate linear 3s infinite;
+    z-index: -1;
+    background: linear-gradient(
+      0.25turn,
+      var(--color-highlight-light),
+      var(--color-highlight-deep)
+    );
+  }
+
+  @keyframes borderRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .inner-layer {
+    background-color: var(--color-bg);
+    margin: 0.2rem;
+    border: 1px inset var(--color-highlight);
+    border-radius: 5px;
+  }
+
+  .text-layer {
+    align-self: center;
+    justify-self: center;
   }
 </style>

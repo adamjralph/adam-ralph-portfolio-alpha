@@ -128,6 +128,8 @@
   // }
 
   &--visible {
+    position: absolute;
+    z-index: 1;
     display: flex;
     visibility: visible;
     opacity: 1;
