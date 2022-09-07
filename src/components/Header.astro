@@ -75,60 +75,60 @@ import("../styles/header.scss")
       </a>
     </nav>
   </header>
+</div>
 
-  <script>
-    // Dark/Light mode
+<script>
+  // Dark/Light mode
 
-    // Add styles
-    const addCss = (css: string) => {
-      const element = document.createElement("style")
-      element.innerText = css
-      const newStyle = document.body.appendChild(element)
-      return newStyle
-    }
+  // Add styles
+  const addCss = (css: string) => {
+    const element = document.createElement("style")
+    element.innerText = css
+    const newStyle = document.body.appendChild(element)
+    return newStyle
+  }
 
-    const colorSchemeToggle = document.querySelector("input[name=checkbox]")
+  const colorSchemeToggle = document.querySelector("input[name=checkbox]")
 
-    colorSchemeToggle.addEventListener("change", function () {
-      if (this.checked) {
-        localStorage.setItem("themeChange-8d23k88", "on")
-      } else {
-        localStorage.removeItem("themeChange-8d23k88")
-      }
-      checkTheme()
-    })
-
-    function checkTheme() {
-      let themeToggle = localStorage.getItem("themeChange-8d23k88")
-      if (themeToggle) {
-        addCss(":root {--color-bg: #ffffff}")
-        addCss(":root {--color-fg: #1b1b1b}")
-      } else {
-        addCss(":root {--color-bg: #1b1b1b}")
-        addCss(":root {--color-fg: #ffffff}")
-      }
+  colorSchemeToggle.addEventListener("change", function () {
+    if (this.checked) {
+      localStorage.setItem("themeChange-8d23k88", "on")
+    } else {
+      localStorage.removeItem("themeChange-8d23k88")
     }
     checkTheme()
+  })
 
-    let hero = document.getElementById("hero")
-
-    function hideHero() {
-      if (hero.style.opacity === "0") {
-        hero.style.opacity = "1"
-      } else {
-        hero.style.opacity = "0"
-      }
+  function checkTheme() {
+    let themeToggle = localStorage.getItem("themeChange-8d23k88")
+    if (themeToggle) {
+      addCss(":root {--color-bg: #ffffff}")
+      addCss(":root {--color-fg: #1b1b1b}")
+    } else {
+      addCss(":root {--color-bg: #1b1b1b}")
+      addCss(":root {--color-fg: #ffffff}")
     }
-    // Toggle menu
-    const navToggle = document.querySelector(".nav-toggle")
-    const nav = document.querySelector(".nav")
+  }
+  checkTheme()
 
-    const navContainer = document.querySelector(".hamburger-logo")
+  let hero = document.getElementById("hero")
 
-    navToggle.addEventListener("click", () => {
-      nav.classList.toggle("nav--visible")
-      navContainer.classList.toggle("nav-transition")
-      hideHero()
-    })
-  </script>
-</div>
+  function hideHero() {
+    if (hero.style.opacity === "0") {
+      hero.style.opacity = "1"
+    } else {
+      hero.style.opacity = "0"
+    }
+  }
+  // Toggle menu
+  const navToggle = document.querySelector(".nav-toggle")
+  const nav = document.querySelector(".nav")
+
+  const navContainer = document.querySelector(".hamburger-logo")
+
+  navToggle.addEventListener("click", () => {
+    nav.classList.toggle("nav--visible")
+    navContainer.classList.toggle("nav-transition")
+    hideHero()
+  })
+</script>

@@ -75,16 +75,23 @@ import("../styles/header.scss")
 
   .hero__image {
     position: absolute;
+    overflow: hidden;
     top: 0;
     right: 0;
     background-image: url("../images/adam-removebg-cropped.png");
     /* margin-block-start: 3rem; */
-    height: 100%;
-    width: 50%;
+    height: 80%;
+    width: 70%;
+    margin-block-start: 2rem;
+    margin-inline-end: -4rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     z-index: -1;
+    animation: fadeInAnimation ease-in 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
   }
 
   .hero__content {
@@ -100,15 +107,14 @@ import("../styles/header.scss")
     margin-block-start: 1rem;
     margin-inline-start: 2rem;
     text-align: left;
-    max-width: 70%;
-    color: var(--color-bg);
-    font-size: var(--font-size-lg);
-    z-index: 1;
-  }
-
-  .hero__heading--2 {
+    max-width: 100%;
     color: var(--color-fg);
     font-size: var(--font-size-xl);
+    z-index: 1;
+    animation: fadeInAnimation ease-in-out 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    /* animation-delay: 0.5s; */
   }
 
   .hero__text {
@@ -116,13 +122,11 @@ import("../styles/header.scss")
     margin-block-start: 1rem;
     margin-inline-start: 2rem;
     text-align: left;
-    max-width: 60%;
-  }
-
-  .hero__contact {
-    width: 100%;
-    max-width: 32%;
-    margin-inline-end: 2rem;
+    max-width: 50%;
+    animation: fadeInAnimation ease-in-out 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-delay: 0.5s;
   }
 
   .horizontal-line {
@@ -155,7 +159,17 @@ import("../styles/header.scss")
     /* padding-inline-end: 0.3rem; */
   }
 
+  .hero__contact {
+    width: 100%;
+    max-width: 32%;
+    margin-inline-end: 2rem;
+  }
+
   .hero__btn {
     padding: 0.2rem;
+    animation: fadeInAnimation ease-in-out 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-delay: 1.5s;
   }
 </style>

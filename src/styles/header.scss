@@ -224,6 +224,10 @@
 
 .social__link {
   padding-inline: 1rem;
+  animation: fadeInAnimation ease-in 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-delay: 1.5s;
 }
 
 // Social icons hover/focus state

@@ -153,3 +153,12 @@ a:visited {
     background-position-y: 80%;
   }
 }
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
