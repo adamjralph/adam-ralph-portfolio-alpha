@@ -111,7 +111,7 @@ import("../styles/header.scss")
   }
   checkTheme()
 
-  let hero = document.getElementById("hero")
+  const hero = document.getElementById("hero")
 
   function hideHero() {
     if (hero.style.opacity === "0") {
@@ -120,6 +120,14 @@ import("../styles/header.scss")
       hero.style.opacity = "0"
     }
   }
+  // function triggerAnimateNavLinks() {
+  //   if (mobileNav.style.display === "none") {
+  //     mobileNav.style.display = "flex"
+  //   } else {
+  //     mobileNav.style.display = "none"
+  //   }
+  // }
+
   // Toggle menu
   const navToggle = document.querySelector(".nav-toggle")
   const nav = document.querySelector(".nav")

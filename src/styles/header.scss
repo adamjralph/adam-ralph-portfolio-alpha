@@ -112,8 +112,6 @@
 .nav {
   visibility: hidden;
   opacity: 0;
-  // display: none;
-
   top: 0;
   position: absolute;
   transform: translateY(-400px);
@@ -130,6 +128,7 @@
   // }
 
   &--visible {
+    display: flex;
     visibility: visible;
     opacity: 1;
     left: 0;
@@ -138,13 +137,12 @@
 
     margin-block-start: 5rem;
     // padding-block: 3rem;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: var(--color-bg);
     transform: translateY(0);
-    transition: transform 0.3s, opacity 0.5s ease-in-out;
+    transition: transform 0.5s ease, opacity 2s ease-in-out;
   }
 }
 
@@ -153,6 +151,10 @@
   padding-inline: 1rem;
   // margin-block-end: 3rem;
   transition: padding 0.3s ease;
+}
+
+.show-links {
+  display: flex;
 }
 
 .nav__link {
