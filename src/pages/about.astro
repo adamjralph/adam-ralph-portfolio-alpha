@@ -9,11 +9,13 @@ import Header from "../components/Header.astro"
     <section class="heading">
       <h1>Card with animated border</h1>
     </section>
-    <section class="card">
-      <div class="color-layer"></div>
-      <div class="inner-layer"></div>
-      <h1 class="text-layer">Hello!</h1>
-    </section>
+    <a href="/">
+      <div class="card">
+        <div class="color-layer"></div>
+        <div class="inner-layer"></div>
+        <h2 class="text-layer">lets talk</h2>
+      </div>
+    </a>
   </div>
 </Layout>
 
@@ -39,9 +41,9 @@ import Header from "../components/Header.astro"
     /* place-items: center; */
     overflow: hidden;
     background-color: transparent;
-    height: 100px;
-    max-height: 200px;
-    max-width: 200px;
+    height: 3rem;
+    max-height: 80px;
+    max-width: 150px;
     margin-inline: auto;
     border: 1px solid var(--color-highlight);
     border-radius: 5px;
@@ -79,7 +81,8 @@ import Header from "../components/Header.astro"
   }
 
   .text-layer {
-    align-self: center;
+    align-self: baseline;
     justify-self: center;
+    margin-block: 0.1em;
   }
 </style>
