@@ -78,8 +78,6 @@ import("../styles/header.scss")
 </div>
 
 <script>
-  // Dark/Light mode
-
   // Add styles
   const addCss = (css: string) => {
     const element = document.createElement("style")
@@ -88,6 +86,7 @@ import("../styles/header.scss")
     return newStyle
   }
 
+  // Dark/Light mode
   const colorSchemeToggle = document.querySelector("input[name=checkbox]")
 
   colorSchemeToggle.addEventListener("change", function () {
