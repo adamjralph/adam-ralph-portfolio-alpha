@@ -34,3 +34,86 @@ import("../styles/about.scss")
   </div>
   <Footer />
 </Layout>
+
+<style>
+  .about-container {
+    display: grid;
+    width: 100%;
+    padding-inline: 2rem;
+  }
+
+  .about-content {
+    max-width: var(--text-width-block);
+    margin-inline: auto;
+  }
+
+  .about-content__heading {
+    align-self: center;
+    margin-block-start: 4rem;
+    /* width: 100%; */
+    margin-inline: auto;
+  }
+
+  .about-content__text {
+    margin-block-start: 3rem;
+    font-size: var(--font-size-base);
+  }
+
+  .card > * {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  .card {
+    display: grid;
+    position: relative;
+    /* place-items: center; */
+    overflow: hidden;
+    background-color: transparent;
+    height: 4rem;
+    max-height: 80px;
+    max-width: 150px;
+    margin-inline: auto;
+    border: 1px solid var(--color-highlight);
+    border-radius: 5px;
+    margin-block: 4rem;
+  }
+
+  .color-layer {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    width: 15%;
+    height: 300%;
+    animation: borderRotate 3s linear infinite;
+    z-index: -1;
+    background: linear-gradient(
+      90deg,
+      var(--color-highlight-light) 0%,
+      var(--color-highlight-deep) 100%
+    );
+  }
+
+  @keyframes borderRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .inner-layer {
+    /* position: relative; */
+    background-color: var(--color-bg);
+    margin: 0.2rem;
+    border: 1px inset var(--color-highlight);
+    border-radius: 5px;
+  }
+
+  .text-layer {
+    align-self: center;
+    justify-self: center;
+    margin-block-end: 0.1em;
+  }
+</style>
