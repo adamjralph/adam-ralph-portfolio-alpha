@@ -1,14 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import Header from "../components/Header.astro"
+import Bio from "../components/Bio.md"
+
+import("../styles/global.scss")
+
+export interface Props {
+  title: string
+}
 ---
 
-<Layout title="About">
+<Layout>
   <Header />
   <div class="about-container">
-    <section class="heading">
-      <h1>Card with animated border</h1>
+    <section class="about-content">
+      <h1 class="about-content__heading">Hello, friend</h1>
+      <p class="about-content__text">
+        <Bio />
+      </p>
     </section>
+
     <a href="/">
       <div class="card">
         <div class="color-layer"></div>
@@ -21,13 +32,25 @@ import Header from "../components/Header.astro"
 
 <style>
   .about-container {
+    display: grid;
     width: 100%;
     padding-inline: 2rem;
   }
-  .heading {
-    margin-block: 2rem;
-    width: 100%;
+
+  .about-content {
+    max-width: 38ch;
     margin-inline: auto;
+  }
+
+  .about-content__heading {
+    align-self: center;
+    margin-block-start: 4rem;
+    /* width: 100%; */
+    margin-inline: auto;
+  }
+
+  .about-content__text {
+    margin-block-start: 3rem;
   }
 
   .card > * {
@@ -41,27 +64,27 @@ import Header from "../components/Header.astro"
     /* place-items: center; */
     overflow: hidden;
     background-color: transparent;
-    height: 3rem;
+    height: 4rem;
     max-height: 80px;
     max-width: 150px;
     margin-inline: auto;
     border: 1px solid var(--color-highlight);
     border-radius: 5px;
+    margin-block: 4rem;
   }
 
   .color-layer {
     position: absolute;
     align-self: center;
     justify-self: center;
-    background-color: var(--color-fg);
     width: 15%;
     height: 300%;
-    animation: borderRotate linear 3s infinite;
+    animation: borderRotate 3s linear infinite;
     z-index: -1;
     background: linear-gradient(
-      0.25turn,
-      var(--color-highlight-light),
-      var(--color-highlight-deep)
+      90deg,
+      var(--color-highlight-light) 0%,
+      var(--color-highlight-deep) 100%
     );
   }
 
@@ -74,6 +97,7 @@ import Header from "../components/Header.astro"
     }
   }
   .inner-layer {
+    /* position: relative; */
     background-color: var(--color-bg);
     margin: 0.2rem;
     border: 1px inset var(--color-highlight);
@@ -81,8 +105,8 @@ import Header from "../components/Header.astro"
   }
 
   .text-layer {
-    align-self: baseline;
+    align-self: center;
     justify-self: center;
-    margin-block: 0.1em;
+    margin-block-end: 0.1em;
   }
 </style>

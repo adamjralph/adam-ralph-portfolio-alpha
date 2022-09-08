@@ -114,7 +114,7 @@
   opacity: 0;
   top: 0;
   position: absolute;
-  transform: translateY(-400px);
+  transform: translateX(-400px);
   transition: transform 0.3s ease-in-out;
   // display: none;
   // @include media.for-tablet(width.$tablet) {
@@ -143,8 +143,8 @@
     align-items: center;
     justify-content: center;
     background: var(--color-bg);
-    transform: translateY(0);
-    transition: transform 0.5s ease, opacity 2s ease-in-out;
+    transform: translateX(0);
+    transition: transform 0.5s ease;
   }
 }
 
