@@ -109,7 +109,7 @@ import Footer from "../components/Footer.astro"
   }
 
   .about-content {
-    max-width: 38ch;
+    max-width: var(--text-width-block);
     margin-inline: auto;
   }
 
@@ -122,6 +122,7 @@ import Footer from "../components/Footer.astro"
 
   .about-content__text {
     margin-block-start: 3rem;
+    font-size: var(--font-size-base);
   }
 
   .card > * {

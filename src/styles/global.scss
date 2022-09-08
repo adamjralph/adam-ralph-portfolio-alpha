@@ -3,6 +3,8 @@
   --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
   --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
 
+  --text-width-block: clamp(20ch, 10vw + 40ch, 80ch);
+
   --font-size-link-mobile: 1.2rem;
 
   /* Theme colors */
