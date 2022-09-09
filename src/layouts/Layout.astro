@@ -41,14 +41,7 @@ const { title } = Astro.props
         &--text {
           font-size: var(--font-size-link-mobile);
         }
-
-        /* @include media.for-tablet(width.$tablet) {
-      margin-inline-end: var(--mg-600);
-      margin-block-start: 1.5rem;
-      color: var(--cl-neutral-black);
-    } */
       }
-
       .nav__btn {
         cursor: pointer;
         width: 100%;
@@ -68,17 +61,9 @@ const { title } = Astro.props
         }
       }
 
-      /* Social icons */
       .header-social {
-        /* display: flex; */
-        /* align-items: space-between; */
-        /* justify-content: space-between; */
         margin-inline: auto;
         margin-block-start: 2rem;
-        /* @include media.for-tablet(width.$tablet) {
-    margin-inline-start: var(--mg-800);
-    margin-block-start: 0.9rem;
-    } */
       }
 
       .social__link {
@@ -89,7 +74,6 @@ const { title } = Astro.props
         animation-delay: 1.5s;
       }
 
-      /* Social icons hover/focus state */
       .header__social {
         display: flex;
       }

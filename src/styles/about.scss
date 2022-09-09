@@ -12,7 +12,6 @@
 .about-content__heading {
   align-self: center;
   margin-block-start: 4rem;
-  /* width: 100%; */
   margin-inline: auto;
 }
 
@@ -29,16 +28,15 @@
 .card {
   display: grid;
   position: relative;
-  /* place-items: center; */
   overflow: hidden;
   background-color: transparent;
-  height: 4rem;
+  height: 3rem;
   max-height: 80px;
   max-width: 150px;
   margin-inline: auto;
   border: 1px solid var(--color-highlight);
   border-radius: 5px;
-  margin-block: 4rem;
+  margin-block: 3rem;
 }
 
 .color-layer {
@@ -66,7 +64,6 @@
 }
 
 .inner-layer {
-  /* position: relative; */
   background-color: var(--color-bg);
   margin: 0.2rem;
   border: 1px inset var(--color-highlight);

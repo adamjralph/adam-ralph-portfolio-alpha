@@ -1,0 +1,122 @@
+---
+import("../styles/about.scss")
+---
+
+<div class="about-container">
+  <section class="about-content">
+    <h1 class="about-content__heading">Hello, friend</h1>
+    <section class="about-links">
+      <a href="/about" class="nav__btn-text about-links__btn"
+        ><button class="btn nav__btn nav_btn--active" id="about-active"
+          >about</button
+        >
+      </a>
+      <a href="/bio" class="nav__btn-text about-links__btn"
+        ><button class="btn nav__btn" id="about-active">bio</button>
+      </a>
+    </section>
+    <p class="about-content__text">
+      <!-- <Bio /> -->
+      I am working towards changing my career to software development.
+      <br />
+      <br />
+      For most of my life I have been the one in my family and circle of friends
+      who was the go to for fixing computers and giving advice on technical purchases.
+      I spent many hours pulling apart and rebuilding PCs, installing operating systems.
+      a computer network for my local Community House in Castlemaine.
+    </p>
+  </section>
+
+  <a href="/">
+    <div class="card">
+      <div class="color-layer"></div>
+      <div class="inner-layer"></div>
+      <h2 class="text-layer">lets talk</h2>
+    </div>
+  </a>
+</div>
+<!-- <style>
+  .about-links {
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: 1fr 1fr;
+    margin-block-start: 1rem;
+  }
+  .about-container {
+    display: grid;
+    width: 100%;
+    padding-inline: 2rem;
+  }
+
+  .about-content {
+    max-width: var(--text-width-block);
+    margin-inline: auto;
+  }
+
+  .about-content__heading {
+    align-self: center;
+    margin-block-start: 4rem;
+    margin-inline: auto;
+  }
+
+  .about-content__text {
+    margin-block-start: 3rem;
+    font-size: var(--font-size-base);
+  }
+
+  .card > * {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  .card {
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    height: 4rem;
+    max-height: 80px;
+    max-width: 150px;
+    margin-inline: auto;
+    border: 1px solid var(--color-highlight);
+    border-radius: 5px;
+    margin-block: 4rem;
+  }
+
+  @keyframes borderRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .color-layer {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    width: 15%;
+    height: 300%;
+    animation: borderRotate 3s linear infinite;
+    z-index: -1;
+    background: linear-gradient(
+      90deg,
+      var(--color-highlight-light) 0%,
+      var(--color-highlight-deep) 100%
+    );
+  }
+
+  .inner-layer {
+    background-color: var(--color-bg);
+    margin: 0.2rem;
+    border: 1px inset var(--color-highlight);
+    border-radius: 5px;
+  }
+
+  .text-layer {
+    align-self: center;
+    justify-self: center;
+    margin-block-end: 0.1em;
+  }
+</style> -->
