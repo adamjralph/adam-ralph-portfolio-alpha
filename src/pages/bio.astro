@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import Header from "../components/Header.astro"
-import AboutLinks from "../components/AboutLinks.astro"
 import Footer from "../components/Footer.astro"
 import("../styles/about.scss")
 ---
@@ -11,7 +10,34 @@ import("../styles/about.scss")
   <div class="about-container">
     <section class="about-content">
       <h1 class="about-content__heading">Hello, friend</h1>
-      <AboutLinks />
+      <section class="about-links">
+        <a href="/about" class="nav__btn-text about-links__btn"
+          ><button class="btn nav__btn nav_btn--active" id="about-active"
+            >about</button
+          >
+        </a>
+        <a href="/bio" class="nav__btn-text about-links__btn"
+          ><button
+            style="background-color: var(--color-fg); color: var(--color-bg)"
+            class="btn nav__btn"
+            id="about-active">bio</button
+          >
+        </a>
+      </section>
+
+      <style>
+        .about-links {
+          display: grid;
+          gap: 0.4rem;
+          grid-template-columns: 1fr 1fr;
+          margin-block-start: 1rem;
+        }
+
+        .about-links__btn {
+          /* width: 7rem; */
+        }
+      </style>
+
       <p class="about-content__text">
         <!-- <Bio /> -->
         I am working towards changing my career to software development.
